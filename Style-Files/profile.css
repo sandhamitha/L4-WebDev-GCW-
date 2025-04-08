@@ -1,0 +1,295 @@
+
+
+
+body {
+    font-family: Inter, sans-serif;
+
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height:fit-content;
+    margin: 0 auto;
+    padding-top:10px;
+    padding-bottom: 100px;
+    background-color:rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    background-image: url('../Src/836.jpg');
+    background-size:cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-info {
+
+    justify-items: left;
+    flex-grow: 1;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 24px;
+    color:#ffffff
+}
+
+.profile-info p {
+    margin: 5px 0;
+    color:#ffffff
+}
+
+.user-details {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.user-details h2 {
+    margin-top: 0;
+}
+
+.skills {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.skill {
+    margin-bottom: 10px;
+}
+
+.skill p {
+    color: #ffffff;
+    margin: 0;
+    font-weight: bold;
+}
+
+.skill-bar {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.skill-level {
+    height: 10px;
+    background-color: #7cff8b;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.cards {
+    max-width: 900px;
+    margin: 40px auto;
+    background: linear-gradient(135deg, #98D8A7 0%, #2b5c3f 100%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+.cards p{
+    color:#ffffff
+    
+}
+
+.cards2 {
+    max-width: 250px;
+    margin: 40px auto;
+    background: linear-gradient(135deg, #98D8A7 0%, #2b5c3f 100%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:#ffffff
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.card {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(5px);
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: #007bff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #333;
+}
+
+
+h1 {
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.month-header {
+    background-color: #255434;
+    color: white;
+    padding: 10px 0;
+
+    border-radius: 4px 4px 0 0;
+}
+
+.month-header h2 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+}
+
+th {
+    font-weight: normal;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+td {
+    color: #333;
+    height: 40px;
+}
+
+.available {
+    background-color: #d9f8dd;
+    color: #00be13;
+    font-weight: bold;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    background-color: #d9f8dd;
+    margin-right: 8px;
+}
+
+.legend-text {
+    font-size: 14px;
+    color: #69ff7b;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #2e7d32;
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.2);
+}
+
+textarea {
+    resize: horizontal;
+    min-height: 100px;
+}
+
+button {
+    background-color: #5c9c5f;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    width: 100%;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}

@@ -1,0 +1,108 @@
+
+
+<!--Styling for the sitemap content-->
+.sitemap-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(43, 92, 63, 0.1);
+    
+}
+
+h1 {
+    text-align: center;
+    color: #095d22;
+}
+
+.sitemap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.column {
+    flex: 1 1 100px;
+    margin: 20px;
+}
+
+.column h3 {
+    color: #095d22;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+li:hover{
+    color: #2b5c3f;
+    transform: translateX(5px);
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+li a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    color: #ffffff;
+}
+
+li a:hover {
+    color: #2b5c3f;
+    transform: translateX(5px);
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+.blocksite {
+
+    justify-content: center; 
+    align-items:center;
+    height: 90vh;          
+    background: linear-gradient(135deg, #98D8A7 0%, #2b5c3f 100%);
+    padding-left: 1%;
+    padding-right: 1%;
+    
+}
+
+.svg {
+    border-color: #ffffff;
+    border-radius:1.5cm;
+    border-style: groove;
+    max-width: 100%;
+    height: auto;
+    justify-content: center;
+    margin-top: 0.2cm;
+    padding-top: 2cm;
+    padding-left: 120px;
+    
+}
+
+text{
+    text-shadow: #2b5c3f;
+    text-decoration:solid;
+    transition: all 0.3s ease;
+    display: inline-flex;
+
+}
+text:hover{
+color: #ffffff;
+transform: translatey(-5px);
+text-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+rect{
+    fill:#ffffff;
+    transition: all 0.3s ease;
+    display: inline-flex;
+
+}
+.rect:hover{
+    color:linear-gradient(135deg, #98D8A7 0%, #2b5c3f 100%);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor - Banuka Senadheera</title>
+
+    <link rel="stylesheet" href="..\Style-Files\global.css">
+    <link rel="stylesheet" href="..\Style-Files\pageEditor_validator.css">
+
+</head>
+<body>
+    
+    <!-- Header section -->
+    <header id="top">
+        <nav class="main-nav">
+            <div class="nav-logo">
+                <img src="../Src/v987-18a.png" alt="Movement Logo">
+                <span>PureWellness</span>
+            </div>
+            <div class="nav-center">
+                <a href="../Source-Files/home.html">Home</a>
+                <a href="../Source-Files/Volunteer.html">Volunteer</a>
+                <a href="../Source-Files/Sitemap.html">Sitemap</a>
+                <a href="../Source-Files/Team.html">Team</a>
+                <a href="../Source-Files/profile.html">Profile</a>
+            </div>
+            <div class="nav-right">
+                <button class="green-power-btn">Join Us</button>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="stud">
+        <h2>Banuka Senadheera, Created webpages = Sitemap, User Profile, Edited the Logo</h2>
+    </section>
+
+    <div class="container">
+        <!-- Main content area -->
+        <main>
+
+            <!-- User Profile Page Section -->
+            <section>
+                <h2>User Profile Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>The document adheres to the standard HTML5 structure, featuring:</br>
+
+                            - A &lt;!DOCTYPE html&gt; declaration that confirms the use of HTML5</br>
+                            - An &lt;html lang="en"&gt; tag that specifies the language for accessibility purposes</br>
+                            - &lt;meta&gt; tags in the&lt;head&gt; section to ensure proper character encoding and responsive design</br>
+                            - External CSS files linked through &lt;link&gt; tags, which help separate global styles from those specific to profiles</br></br>
+                            
+                            <h2>Navigation and Header</h2>
+                            The header includes a three-section horizontal navigation bar:</br>
+                            
+                            - .main-nav acts as a flex container divided into three parts</br>
+                            - .nav-logo merges an image with text to establish brand identity</br>
+                            - .nav-center offers centrally aligned navigation links</br>
+                            - .nav-right features a call-to-action button styled with .green-power-btn</br>
+                            
+                            This navigation design promotes a balanced arrangement of elements across the header while preserving visual hierarchy.</br></br>
+                            
+                            <h2>Main Content Structure</h2>
+                            The main content employs a card-based layout system:</br>
+                            
+                            - .container functions as the primary wrapper for content sections</br>
+                            - .cards and .cards2 are utilized for various card styles throughout the page</br>
+                            - Profile information is organized into separate card sections for enhanced visual clarity</br></br>
+                            
+                            <h2>Profile Information Section</h2>
+                            The profile section incorporates:</br>
+                            
+                            - .profile-picture for the user's image, likely styled with CSS to achieve a circular shape</br>
+                            - .profile-info for presenting personal details, using appropriate hierarchy with &lt;h1&gt; and &lt;p&gt; tags</br></br>
+                            
+                            <h2>Content Cards with Flexible Layout</h2>
+                            The "Areas of Interest" section illustrates:</br>
+                            
+                            - .cards-container, which creates a flexible grid layout</br>
+                            - .card elements that include both images and text content</br>
+                            - A combination of images and text with semantic heading levels (&lt;h3&gt;)</br></br>
+                            
+                            <h2>Skills Visualization</h2>
+                            The skills section features:</br>
+                            
+                            - .skill-bar to create visual progress bars</br>
+                            - .skill-level with inline width styles (e.g., style="width: 80%;") to indicate skill proficiency</br>
+                            This method provides an intuitive visual representation of skill levels.</br></br>
+                            
+                            <h2>Calendar Implementation</h2>
+                            The availability calendar utilizes:</br>
+                            
+                            - An HTML &lt;table&gt; for an organized date display</br>
+                            - The .available class to highlight available dates</br>
+                            - A legend to clarify the meaning of the displayed information.</br>
+                        </p>
+                        
+                    <h3>Accessibility</h3>
+                        <p>The profile page has been designed with several accessibility considerations:
+                            <ul>
+                                <li>Proper language attribute (lang="en") in the HTML tag to assist screen readers with pronunciation</li>
+                                <li>Semantic HTML structure using appropriate heading levels (h1, h2, h3) to create a logical document outline</li>
+                                <li>Alt text for all images to provide descriptions for screen reader users</li>
+                                <li>Adequate color contrast between text and background for readability</li>
+                                <li>Responsive design that adapts to different screen sizes for users with various devices</li>
+                                <li>Form labels properly associated with input fields using the 'for' attribute</li>
+                                <li>Table structure with proper headers for the calendar to ensure screen readers can interpret the data correctly</li>
+                                <li>Visual indicators for availability in the calendar with supporting text explanation in the legend</li>
+                            </ul>
+                        </p>
+                    
+                    <h3>Link to the validation page</h3>
+                        <p><a href="..\Source-Files\validation_ST04.html#splashVal">Link to validation results</a>, use the marker to jump to the corresponding section of the validation page.</p>
+
+                    <h3>Link to the page</h3>
+                        <p><a href="profile.html">Link to User Profile page</a></p>
+            </section>
+
+            <section>
+                <h2 id="volunteer">Sitemap page</h2>
+                    <h3>Technical Description</h3>
+                        <p>The Sitemap page incorporates several advanced HTML and CSS techniques to create an interactive visual representation of the website structure:</p>
+                        
+                        <p><strong>SVG Implementation</strong><br>
+                        The centerpiece of the sitemap is an SVG (Scalable Vector Graphics) element that provides a visual hierarchy of the website's structure:
+                        <ul>
+                            <li>The &lt;svg&gt; tag with defined width and height creates a canvas for the sitemap visualization</li>
+                            <li>&lt;rect&gt; elements with rx/ry attributes create rounded rectangle nodes for each page</li>
+                            <li>&lt;text&gt; elements position the page names within each rectangle</li>
+                            <li>&lt;line&gt; elements connect the nodes to show relationships between pages</li>
+                            <li>Wrapping &lt;a&gt; tags around &lt;rect&gt; and &lt;text&gt; elements make the entire node clickable</li>
+                        </ul>
+                        </p>
+                        
+                        <p><strong>Visual Hierarchy</strong><br>
+                        The design emphasizes clear visualization of the site structure:
+                        <ul>
+                            <li>Central positioning of the main "WEBSITE--SITEMAP" node at the top</li>
+                            <li>Radiating lines connecting to secondary pages</li>
+                            <li>Consistent styling of nodes with rounded corners for visual appeal</li>
+                            <li>Strategic positioning of elements using x/y coordinates for clean layout</li>
+                        </ul>
+                        </p>
+                        
+                        <p><strong>Interactive Elements</strong><br>
+                        The sitemap is functional, not just decorative:
+                        <ul>
+                            <li>Each node serves as a navigation element linked to its corresponding page</li>
+                            <li>The SVG is contained within a responsive container (.blocksite) to maintain proper display across devices</li>
+                        </ul>
+                        </p>
+
+                    <h3>Accessibility</h3>
+                        <p>The Sitemap page addresses accessibility in several key ways:
+                            <ul>
+                                <li>Proper document structure with semantic HTML elements</li>
+                                <li>Text alternatives within SVG elements to ensure content is accessible even if graphics cannot be displayed</li>
+                                <li>Clickable areas are sufficiently large to accommodate users with motor control limitations</li>
+                                <li>Page uses the lang attribute to identify the language of the content</li>
+                                <li>Navigation links are clearly labeled and consistent with the rest of the site</li>
+                                <li>SVG elements include appropriate text labels that can be interpreted by assistive technologies</li>
+                                <li>Visual connections between site elements are reinforced with text labels, not relying solely on visual connections</li>
+                            </ul>
+                        </p>
+
+                    <h3>Link to the validation page</h3>
+                        <p><a href="../Source-Files/validation_ST04.html#volunteerVal">Link to validation results</a>, use the marker to jump to the corresponding section of the validation page.</p>
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="../Source-Files/Sitemap.html">Link to Sitemap page</a></p>
+            </section>
+
+            <section>
+                <h2 id="content">Content Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>The Mental Health & Mindfulness Support content page employs a range of HTML and CSS techniques to create an informative and user-friendly experience:</p>
+                        
+                        <p><strong>Structured Layout</strong><br>
+                        The page uses a two-column responsive layout:
+                        <ul>
+                            <li>The &lt;main&gt; element wraps the primary content area to semantically identify it</li>
+                            <li>The .content-container class creates a flexible layout with internal navigation and main content sections</li>
+                            <li>The .internal-nav section provides an accessible way to jump to different sections of the page</li>
+                            <li>The .main-content section houses the primary informational content</li>
+                        </ul>
+                        </p>
+                        
+                        <p><strong>Section Organization</strong><br>
+                        Content is organized into distinct semantic sections:
+                        <ul>
+                            <li>&lt;section&gt; elements with unique ID attributes create anchor points for navigation</li>
+                            <li>Heading hierarchy (&lt;h1&gt;, &lt;h2&gt;) provides clear content structure and improves SEO</li>
+                            <li>Alternating text and images create visual rhythm and improve readability</li>
+                            <li>Bulleted lists (&lt;ul&gt;, &lt;li&gt;) break down complex information into digestible points</li>
+                        </ul>
+                        </p>
+                        
+                        <p><strong>Navigation Enhancement</strong><br>
+                        The page includes specialized navigation features:
+                        <ul>
+                            <li>A "Go to Top" button appears when scrolling, implemented with JavaScript for improved user experience</li>
+                            <li>The internal navigation menu provides quick links to each section of the content</li>
+                            <li>Anchor links with fragment identifiers (#section-id) enable smooth navigation within the long-form content</li>
+                        </ul>
+                        </p>
+                        
+                        <p><strong>Responsive Media</strong><br>
+                        Visual elements enhance the content while maintaining responsiveness:
+                        <ul>
+                            <li>The .content-image class applies consistent styling to all section images</li>
+                            <li>Images are contextually relevant to their surrounding content</li>
+                            <li>Alt text provides descriptive alternatives for all images</li>
+                        </ul>
+                        </p>
+
+                    <h3>Accessibility</h3>
+                        <p>The Content page incorporates numerous accessibility features:
+                            <ul>
+                                <li>Semantic HTML5 elements (&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;footer&gt;) create a logical document structure</li>
+                                <li>Proper heading hierarchy provides clear content organization for screen reader users</li>
+                                <li>Internal navigation links allow users to skip directly to specific content sections</li>
+                                <li>"Go to Top" button enables easy navigation for users with mobility impairments</li>
+                                <li>Alt text for all images ensures visual content is accessible to screen reader users</li>
+                                <li>Language attribute (lang="en") assists screen readers with pronunciation</li>
+                                <li>Lists are properly structured with &lt;ul&gt; and &lt;li&gt; elements for clear organization</li>
+                                <li>Color contrast meets accessibility standards for readability</li>
+                                <li>Responsive design ensures content is accessible across different devices and screen sizes</li>
+                            </ul>
+                        </p>
+
+                    <h3>Link to the validation page</h3>
+                        <p><a href="..\Source-Files\validation_ST04.html#contentVal">Link to validation results</a>, use the marker to jump to the corresponding section of the validation page.</p>
+                        
+                    <h3>Link to the page</h3>
+                        <p><a href="../Source-Files/Content_ST04.html">Link to Content page</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge"> Challenges and Lessons Learned</h2>
+                    <p>
+                        <ul>
+                            <li><strong>Complex Error Resolution:</strong> One of the significant challenges was interpreting and resolving complex validation errors. HTML validation errors often provided cryptic messages that required additional research to understand and fix properly. This taught me the importance of methodical debugging and consulting documentation.</li>
+                            
+                            <li><strong>CSS File Linking Issues:</strong> Initially, I struggled with properly linking CSS files due to path reference errors. I learned that relative paths need careful attention, especially when working with nested directory structures. This reinforced the importance of understanding file system organization and the difference between relative and absolute paths.</li>
+                            
+                            <li><strong>Syntax Variations:</strong> I encountered difficulties with the different syntax requirements for linking images versus creating hyperlinks. The subtle differences between src attributes for images and href attributes for links caused unexpected rendering issues. This experience taught me to be precise with HTML syntax and to test links thoroughly before implementation.</li>
+                            
+                            <li><strong>SVG Implementation:</strong> Creating the interactive SVG sitemap was particularly challenging as it required learning a different set of elements and attributes compared to standard HTML. I gained valuable experience with coordinates, shapes, and connecting SVG elements with standard HTML functionality.</li>
+                            
+                            <li><strong>Responsive Design Balance:</strong> Ensuring that pages displayed properly across different screen sizes required careful attention to CSS media queries and flexible layout systems. I learned to test designs across multiple viewports rather than optimizing for a single screen size.</li>
+                        </ul>
+                    </p> 
+            </section>
+
+            <section>
+                <h2 id="compliance"> Compliance</h2>
+                    <p>The pages I've created adhere to Janet regulations for web page publication through several key implementations:</p>
+                    
+                    <p><strong>Accessibility Compliance:</strong> All pages implement WCAG 2.1 principles through proper semantic HTML, adequate color contrast, alternative text for images, and keyboard-navigable interfaces. This ensures content is accessible to users with disabilities as required by Janet's digital inclusion policies.</p>
+                    
+                    <p><strong>Data Protection:</strong> The contact forms include only necessary fields and don't collect excessive personal information, in compliance with data minimization principles. While this is a demonstration site, in a production environment, appropriate privacy notices would be added to comply with UK GDPR requirements that Janet institutions must follow.</p>
+                    
+                    <p><strong>Security Considerations:</strong> The HTML structure follows security best practices by avoiding inline JavaScript where possible and using external CSS files. Form inputs would require server-side validation in a production environment to prevent injection attacks, as specified in Janet's security guidelines.</p>
+                    
+                    <p><strong>Copyright Compliance:</strong> All visual assets used are either original creations, properly licensed, or referenced appropriately in the documentation. This respects intellectual property rights as required by Janet's acceptable use policies.</p>
+                    
+                    <p><strong>Consistent Navigation:</strong> The implementation of consistent headers, footers, and navigation across all pages follows Janet's recommendation for institutional websites to maintain coherent user experience and branding.</p>
+                    
+                    <p><strong>Valid Markup:</strong> All pages have been validated using W3C validators to ensure standards compliance, which aligns with Janet's emphasis on using established web standards for institutional websites.</p>
+            </section>
+
+            <section>
+                <h2 id="ref">References</h2>
+                <p>Provide links to resources you used following a consistent format (e.g., APA, MLA, or a simplified style). For example:<br><br>
+                    <ul class="ref">
+                        <li>iStock (2024) <i>Mental Health and Wellness Images.</i> Available at: <a href="https://www.istockphoto.com/photos/mental-health">https://www.istockphoto.com/photos/mental-health</a> (Last accessed: 15 Feb 2024).</li>
+                        <li>Duckett, J. (2011). <i>HTML and CSS: Design and Build Websites.</i> John Wiley & Sons, Inc. Indianapolis.</li>
+                        <li>MDN Web Docs (2024) <i>SVG: Scalable Vector Graphics.</i> Available at: <a href="https://developer.mozilla.org/en-US/docs/Web/SVG">https://developer.mozilla.org/en-US/docs/Web/SVG</a> (Last accessed: 12 Feb 2024).</li>
+                        <li>W3C (2023) <i>Web Content Accessibility Guidelines (WCAG) 2.1.</i> Available at: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a> (Last accessed: 10 Feb 2024).</li>
+                        <li>Frain, B. (2020) <i>Responsive Web Design with HTML5 and CSS: Develop future-proof responsive websites.</i> Packt Publishing.</li>
+                    </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside>
+            <h3>Core pages developed:</h3>
+
+            <ul class="top-level-ul">
+                <li>Student 4</li>
+                    <ul>
+                        <li><a href="..\Source-Files\profile.html">Profile page </a></li>
+                        <li><a href="..\Source-Files\Sitemap.html">Sitemap page</a></li>
+                        <li><a href="..\Source-Files\Content_ST04.html">Content page</a></li>
+                    </ul>
+                <li><a href="#challenge">Challenges and Lessons Learned</a></li>
+                <li><a href="#compliance">Compliance</a></li>
+                <li><a href="#ref">References</a></li>
+            </ul>
+        </aside>
+    </div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-main">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img src="../Src/v987-18a.png" alt="Movement Logo">
+                    <p>Empowering communities through sustainable initiatives and positive change.</p>
+                </div>
+                <div class="footer-join">
+                    <h3>Join Movement</h3>
+                    <p>Together, we can create a healthier, more sustainable future. Join our community of change-makers today!</p>
+                    <button class="join-movement-btn">
+                        Join the movement 
+                    </button>
+                </div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-section stay-updated">
+                    <h3>Stay Updated</h3>
+                    <p>Get exclusive updates and news directly in your inbox:</p>
+                    <form>
+                        <input type="email" placeholder="Enter your email address">
+                        <button type="submit">Subscribe →</button>
+                    </form>
+                </div>
+                
+            </div>
+            <div class="footer-right">
+                <div class="footer-section quick-links">
+                    <h3>Quick Links</h3>
+                    <div class="links-grid">
+                        <div class="links-column">
+                            <ul>
+                                <li><a href="../Source-Files/Main.html">Home</a></li>
+                                <li><a href="../Source-Files/Volunteer.html">Volunteer</a></li>
+                                <li><a href="../Source-Files/profile.html">Profile page </a></li>
+                                <li><a href="../Source-Files/Sitemap.html">Sitemap page</a></li>
+                                <li><a href="../Source-Files/Content_ST04.html">Content page</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section general-links">
+                    <h3>General</h3>
+                    <ul>
+                        <li><a href="../Source-Files/Sitemap.html">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Movement For Better Health. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

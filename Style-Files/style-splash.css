@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../Src/good-health-well-being.jpeg') center; /*background image*/
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Opacity adjust*/
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0000009d;
+    z-index: -1;
+}
+
+.container {
+    background: #000000be;
+    padding: 30px;
+    border-radius: 30px;
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Smooth fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.button {
+    display: inline-block;
+    background: #2b5c3f;
+    color: #ffffff;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #4c8b6e;
+    transform: scale(1.02);
+}
+
+.group-members {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.group-members p {
+    font-size: 15px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 85%;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    p {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 15px;
+        width: 90%;
+        border-radius: 20px;
+    }
+    
+    h1 {
+        font-size: 1.7em;
+    }
+    
+    p {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+    
+    .button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    
+    .group-members {
+        font-size: 16px;
+    }
+    
+    .group-members p {
+        font-size: 13px;
+    }
+}

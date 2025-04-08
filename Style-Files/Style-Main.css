@@ -1,92 +1,10 @@
-/* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.5;
     color: #333;
     background-color: #f8f9fa;
-    margin-bottom: 0; /* Remove the margin we added for fixed footer */
 }
 
-/* Header and Navigation */
-header {
-    padding: 24px 5%;
-    background-color: #ffffff;
-}
-
-.main-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.nav-logo img {
-    height: 32px;
-}
-
-.nav-logo span {
-    font-weight: 600;
-    font-size: 19px;
-    color: #1a1a1a;
-}
-
-.nav-center {
-    display: flex;
-    gap: 32px;
-}
-
-.nav-center a {
-    text-decoration: none;
-    color: #4a4a4a;
-    font-size: 15px;
-    transition: color 0.3s ease;
-}
-
-.nav-center a:hover {
-    color: #2b5c3f;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.join-link {
-    text-decoration: none;
-    color: #4a4a4a;
-    font-size: 15px;
-}
-
-.green-power-btn {
-    background-color: #1a1a1a;
-    color: white;
-    border: none;
-    padding: 10px 19px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 15px;
-    transition: background-color 0.3s ease;
-}
-
-.green-power-btn:hover {
-    background-color: #2b5c3f;
-}
-
-/* Hero Section */
 .hero {
     max-width: 1400px;
     margin: 0 auto;
@@ -195,7 +113,12 @@ header {
     height: 100%;
     object-fit: cover;
     border-radius: 24px;
-    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15));
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: translateY(-5px);
 }
 
 .location-tag {
@@ -218,7 +141,7 @@ header {
     position: absolute;
     width: 300px;
     height: 300px;
-    background-color: rgba(152, 216, 167, 0.1);
+    background-color: #98d8a71a;
     border-radius: 50%;
     top: -100px;
     left: -100px;
@@ -251,7 +174,6 @@ header {
     right: -20px;
     width: 100px;
     height: 100px;
-    background: url('https://placehold.co/100x100/ffffff/98D8A7?text=🌿') no-repeat center;
     opacity: 0.1;
     transform: rotate(-15deg);
 }
@@ -272,10 +194,6 @@ header {
     background-color: #ffffff;
     margin-top: 12px;
     border-radius: 2px;
-}
-
-.topic-list ul {
-    list-style: none;
 }
 
 .topic-list li {
@@ -324,7 +242,7 @@ header {
     right: 0;
     width: 80px;
     height: 80px;
-    background: url('https://placehold.co/80x80/ffffff/98D8A7?text=📌') no-repeat center;
+    background: url('https://images.unsplash.com/photo-1616680213669-92c78c2aa1e7?w=80&h=80&fit=crop&auto=format') no-repeat center;
     opacity: 0.1;
     transform: translate(20px, -20px) rotate(15deg);
 }
@@ -345,9 +263,41 @@ header {
 }
 
 .topic-card-icon {
-    width: 48px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
     margin-bottom: 20px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.topic-card:hover .topic-card-icon {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(43, 92, 63, 0.2);
+}
+/* Go to Top Button */
+.go-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #2b5c3f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    font-size: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.go-to-top-btn:hover {
+    background: #234b33;
+    transform: translateY(-4px);
 }
 
 /* Volunteer Section */
@@ -363,6 +313,9 @@ header {
     min-height: 80vh;
     display: flex;
     align-items: center;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
 }
 
 .volunteer::before {
@@ -372,7 +325,6 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('https://placehold.co/600x400/ffffff/98D8A7?text=✋') no-repeat center;
     opacity: 0.05;
     background-size: cover;
 }
@@ -495,4 +447,174 @@ header {
 .join-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(43, 92, 63, 0.4);
+}
+
+/* Topic list decoration */
+.topic-list-decoration {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    opacity: 0.1;
+    transform: rotate(-15deg);
+}
+
+.topic-list-decoration img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+
+@media (max-width: 1024px) {
+    /* Topic Grid */
+    .topic-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .topic-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Volunteer Section */
+    .volunteer-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .volunteer-left {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero {
+        min-height: auto;
+        padding: 40px 5%;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-tag {
+        margin: 0 auto 24px;
+    }
+
+    /* Topic Cards */
+    .topic-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .topic-card {
+        padding: 24px;
+    }
+
+    /* Volunteer Section */
+    .volunteer {
+        padding: 40px 5%;
+    }
+
+    .volunteer-title h2 {
+        font-size: 32px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .step {
+        padding: 20px;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .join-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .topic-card-icon {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact-btn,
+    .about-link {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Topic List */
+    .topic-list {
+        padding: 24px;
+    }
+
+    .topic-list h2 {
+        font-size: 24px;
+    }
+
+    /* Volunteer Section */
+    .volunteer-title h2 {
+        font-size: 28px;
+    }
+
+    .volunteer-title p {
+        font-size: 16px;
+    }
+
+    .step h3 {
+        font-size: 18px;
+    }
+
+    .step p {
+        font-size: 14px;
+    }
+
+    .topic-card-icon {
+        width: 48px;
+        height: 48px;
+    }
 }
