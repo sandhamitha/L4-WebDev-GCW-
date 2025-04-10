@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Purewellness</title>
+    <link rel="stylesheet" href="../Style-Files/global.css">
+    <link rel="stylesheet" href="../Style-Files/Style-Main.css">
+    <link rel="stylesheet" href="../Style-Files/feedback.css">
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="main-nav">
+            <div class="nav-logo">
+                <img src="../Src/logo-health.png" alt="Movement Logo">
+                <span>PureWellness</span>
+            </div>
+            <div class="nav-center">
+                <a href="../Source-Files/home.html">Home</a>
+                <a href="../Source-Files/Volunteer.html">Volunteer</a>
+                <a href="../Source-Files/Sitemap.html">Sitemap</a>
+                <a href="../Source-Files/Team.html">Team</a>
+                <a href="../Source-Files/profile.html">Profile</a>
+                
+            </div>
+            <div class="nav-right">
+                <button class="green-power-btn">Join Us</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+
+        
+        <div class="container">
+            <h1>Feedback Form</h1>
+            <form onsubmit="return submitForm(event)">
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    <div class="form-group">
+                        <label for="full-name">Full Name:</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your e-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telephone Number:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Enter 10-digit number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address:</label>
+                        <textarea id="address" name="address" rows="3" placeholder="No, Road name, City, Country" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender:</label>
+                        <div class="gender-options">
+                            <input type="radio" id="male" name="gender" value="Male" required>
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="Female">
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Date of Birth:</label>
+                        <div class="dob-container">
+                            <select id="dob-year" name="dob-year" required>
+                                <option value="">Year</option>
+                            </select>
+                            <select id="dob-month" name="dob-month" required>
+                                <option value="">Month</option>
+                            </select>
+                            <select id="dob-day" name="dob-day" required>
+                                <option value="">Day</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Feedback Details</legend>
+                    <div class="form-group">
+                        <label for="comment">Comment:</label>
+                        <textarea id="comment" name="comment" rows="4" maxlength="200" oninput="updateCounter()"></textarea>
+                        <p id="char-counter">200 characters remaining</p>
+                    </div>
+                    <div class="form-group">
+                        <label>Did this website meet your expectations?</label>
+                        <div class="checkbox-container">
+                            <input type="radio" id="expectations-yes" name="expectations" value="Yes" required>
+                            <label for="expectations-yes">Yes</label>
+                            <input type="radio" id="expectations-no" name="expectations" value="No">
+                            <label for="expectations-no">No</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Rate Your Experience:</label>
+                        <div class="rating">
+                            <input type="radio" name="rating" id="star5" value="5">
+                            <label for="star5" class="emoji-label" data-tooltip="Excellent">😃</label>
+                            <input type="radio" name="rating" id="star4" value="4">
+                            <label for="star4" class="emoji-label" data-tooltip="Good">😊</label>
+                            <input type="radio" name="rating" id="star3" value="3">
+                            <label for="star3" class="emoji-label" data-tooltip="Neutral">😐</label>
+                            <input type="radio" name="rating" id="star2" value="2">
+                            <label for="star2" class="emoji-label" data-tooltip="Poor">☹</label>
+                            <input type="radio" name="rating" id="star1" value="1">
+                            <label for="star1" class="emoji-label" data-tooltip="Terrible">😢</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="attachment">Upload Screenshot/Document:</label>
+                        <input type="file" id="attachment" name="attachment" accept=".jpg, .jpeg, .png, .pdf, .docx">
+                    </div>
+                </fieldset>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+        <script>
+            function populateDOB() {
+                let yearSelect = document.getElementById("dob-year");
+                let monthSelect = document.getElementById("dob-month");
+                let daySelect = document.getElementById("dob-day");
+                for (let i = 2025; i >= 1900; i--) {
+                    let option = document.createElement("option");
+                    option.value = i;
+                    option.textContent = i;
+                    yearSelect.appendChild(option);
+                }
+                let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                for (let i = 0; i < months.length; i++) {
+                    let option = document.createElement("option");
+                    option.value = i + 1;
+                    option.textContent = months[i];
+                    monthSelect.appendChild(option);
+                }
+                for (let i = 1; i <= 31; i++) {
+                    let option = document.createElement("option");
+                    option.value = i;
+                    option.textContent = i;
+                    daySelect.appendChild(option);
+                }
+            }
+            function updateCounter() {
+                let commentBox = document.getElementById("comment");
+                let counter = document.getElementById("char-counter");
+                let remaining = 200 - commentBox.value.length;
+                counter.textContent = remaining + " characters remaining";
+            }
+            function submitForm(event) {
+                event.preventDefault();
+                alert("Feedback sent successfully!");
+                document.querySelector("form").reset();
+                updateCounter();
+                return false;
+            }
+            window.onload = populateDOB;
+        </script>
+    </main>
+
+       <!-- Footer -->
+       <footer>
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <img src="../Src/logo-health.png" alt="Movement Logo">
+                        <p>Empowering communities through sustainable initiatives and positive change.</p>
+                    </div>
+                    <div class="footer-join">
+                        <h3>Join Movement</h3>
+                        <p>Together, we can create a healthier, more sustainable future. Join our community of change-makers today!</p>
+                        <button class="join-movement-btn">
+                            Join the movement 
+                        </button>
+                    </div>
+                </div>
+                <div class="footer-center">
+                    <div class="footer-section stay-updated">
+                        <h3>Stay Updated</h3>
+                        <p>Get exclusive updates and news directly in your inbox:</p>
+                        <form>
+                            <input type="email" placeholder="Enter your email address">
+                            <button type="submit">Subscribe →</button>
+                        </form>
+                    </div>
+                    
+                </div>
+                <div class="footer-right">
+                    <div class="footer-section quick-links">
+                        <h3>Quick Links</h3>
+                        <div class="links-grid">
+                            <div class="links-column">
+                                <ul>
+                                    <li><a href="../Source-Files/home.html">Home</a></li>
+                                    <li><a href="../Source-Files/Contentst03.html">Content Page</a></li>
+                                    <li><a href="../Source-Files/Team.html">Team Page</a></li>
+                                    <li><a href="../Source-Files/Feedback.html">Feedback page</a></li> 
+                                    <li><a href="../Source-Files/validation_ST0.html">validation page</a></li>                           
+    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-section general-links">
+                        <h3>General</h3>
+                        <ul>
+                            <li><a href="../Source-Files/Sitemap.html">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Movement For Better Health. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

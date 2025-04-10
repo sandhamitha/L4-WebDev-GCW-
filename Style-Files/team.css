@@ -1,0 +1,70 @@
+h1 {
+    margin-top: 50px; /
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 100px;
+}
+
+.team-member {
+    position: relative;
+    width: 220px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.team-member:hover img {
+    opacity: 0.4;
+}
+
+.name {
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.details {
+    display: none;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(10px);
+    opacity: 0;
+}
+
+.details p {
+    margin: 5px 0;
+}
+
+.details ul {
+    padding-left: 20px;
+}
+
+.team-member:hover .details {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+

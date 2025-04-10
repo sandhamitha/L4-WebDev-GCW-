@@ -17,6 +17,7 @@ header {
     padding: 24px 5%;
     background: #ffffff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .main-nav {
@@ -31,6 +32,7 @@ header {
     display: flex;
     align-items: center;
     gap: 8px;
+    z-index: 1000;
 }
 
 .nav-logo img {
@@ -94,6 +96,85 @@ header {
 
 .green-power-btn:hover {
     background-color: #2b5c3f;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+    .main-nav {
+        position: relative;
+    }
+
+    .nav-logo {
+        z-index: 1000;
+    }
+
+    .nav-center {
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        display: none;
+    }
+
+    .nav-right {
+        width: 100%;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .nav-center a {
+        font-size: 18px;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .green-power-btn {
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+    }
+
+    /* Show navigation when screen is small */
+    @media (max-width: 768px) {
+        .nav-center {
+            display: flex;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    .nav-logo span {
+        font-size: 16px;
+    }
+
+    .nav-logo img {
+        height: 40px;
+    }
+
+    .nav-center a {
+        font-size: 16px;
+    }
+
+    .green-power-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
 }
 
 /* Footer Styles */
